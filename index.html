@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbot</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Login/Signup Page -->
+    <div id="auth-page" class="auth-container">
+        <h2>Welcome to Chatbot</h2>
+        <div id="login-form">
+            <input type="text" id="login-username" placeholder="Username">
+            <input type="password" id="login-password" placeholder="Password">
+            <button id="login-btn">Login</button>
+            <p>Don't have an account? <a href="#" id="show-signup">Sign Up</a></p>
+            <p><a href="#" id="show-forgot-password">Forgot Password?</a></p>
+        </div>
+        <div id="signup-form" class="hidden">
+            <input type="text" id="signup-username" placeholder="Username">
+            <input type="password" id="signup-password" placeholder="Password">
+            <button id="signup-btn">Sign Up</button>
+            <p>Already have an account? <a href="#" id="show-login">Login</a></p>
+        </div>
+        <div id="forgot-password-form" class="hidden">
+            <input type="text" id="forgot-username" placeholder="Username">
+            <input type="password" id="new-password" placeholder="New Password">
+            <button id="reset-password-btn">Reset Password</button>
+            <p><a href="#" id="show-login-from-forgot">Back to Login</a></p>
+        </div>
+    </div>
+
+    <!-- Chatbot Page -->
+    <div id="chat-page" class="hidden">
+        <!-- Navigation Bar -->
+        <nav class="navbar">
+            <h2>Chatbot</h2>
+            <div class="navbar-controls">
+                <button id="share-btn">🔗 Share</button>
+                <button id="voice-over-btn">🔊 Voice Over</button>
+                <div class="history-dropdown">
+                    <button id="history-btn">Search History</button>
+                    <ul id="history-list" class="hidden"></ul>
+                </div>
+                <button id="logout-btn">Logout</button>
+            </div>
+        </nav>
+
+        <!-- Chat Container -->
+        <div class="chat-container">
+            <div class="chat-box" id="chat-box">
+                <!-- Chat messages will appear here -->
+            </div>
+            <div class="chat-input">
+                <input type="text" id="user-input" placeholder="Type a message...">
+                <button id="voice-search-btn">🎤</button>
+                <button id="send-btn">Send</button>
+                <label for="file-input" class="file-label">📎</label>
+                <input type="file" id="file-input" accept="image/*, .pdf, .doc, .docx">
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

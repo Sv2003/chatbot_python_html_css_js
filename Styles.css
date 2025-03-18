@@ -1,0 +1,214 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.auth-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.auth-container input {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.auth-container button {
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.auth-container button:hover {
+    background-color: #0056b3;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Navigation Bar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.navbar h2 {
+    margin: 0;
+}
+
+.navbar-controls {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+#voice-over-btn, #share-btn {
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#voice-over-btn.active {
+    color: #ffcc00; /* Highlight when active */
+}
+
+.history-dropdown {
+    position: relative;
+}
+
+.history-dropdown button {
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.history-dropdown ul {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    list-style-type: none;
+    padding: 10px;
+    margin: 0;
+    width: 200px;
+    max-height: 150px;
+    overflow-y: auto;
+}
+
+.history-dropdown ul li {
+    padding: 5px 0;
+    border-bottom: 1px solid #ddd;
+    color: #333;
+    cursor: pointer;
+}
+
+.history-dropdown ul li:last-child {
+    border-bottom: none;
+}
+
+/* Chat Container */
+.chat-container {
+    width: 500px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    margin-top: 10px;
+}
+
+.chat-box {
+    height: 300px;
+    padding: 15px;
+    overflow-y: auto;
+    border-bottom: 1px solid #ddd;
+}
+
+.chat-input {
+    display: flex;
+    padding: 10px;
+    gap: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.chat-input input[type="text"] {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    outline: none;
+}
+
+.chat-input button {
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.chat-input button:hover {
+    background-color: #0056b3;
+}
+
+.file-label {
+    background-color: #f1f1f1;
+    padding: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.file-label:hover {
+    background-color: #ddd;
+}
+
+#file-input {
+    display: none;
+}
+
+/* Messages */
+.message {
+    margin-bottom: 15px;
+}
+
+.message.user {
+    text-align: right;
+}
+
+.message.bot {
+    text-align: left;
+}
+
+.message p {
+    display: inline-block;
+    padding: 10px;
+    border-radius: 4px;
+    max-width: 70%;
+    cursor: pointer;
+}
+
+.message.user p {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.message.bot p {
+    background-color: #f1f1f1;
+    color: #333;
+}
+
+.message.bot p:hover {
+    background-color: #e1e1e1;
+}
